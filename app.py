@@ -3,8 +3,8 @@ from flask import Flask, render_template, request, jsonify, abort
 app = Flask(__name__)
 
 BOOKS = [
-    {"id": 1, "title": "Python Cơ Bản", "author": "Nguyễn Văn A", "year": 2021, "category": "Lập trình", "available": True},
-    {"id": 2, "title": "Flask Web", "author": "Trần Thị B", "year": 2022, "category": "Lập trình", "available": False},
+    {"id": 1, "title": "Python Cơ Bản", "author": "Nguyễn Thị Chíp", "year": 2021, "category": "Lập trình", "available": True},
+    {"id": 2, "title": "Flask Web", "author": "Trần Thị Na", "year": 2022, "category": "Lập trình", "available": False},
     {"id": 3, "title": "Dế Mèn Phiêu Lưu Ký", "author": "Tô Hoài", "year": 1941, "category": "Văn học", "available": True},
     {"id": 4, "title": "Sapiens", "author": "Yuval Harari", "year": 2011, "category": "Lịch sử", "available": True},
 ]
