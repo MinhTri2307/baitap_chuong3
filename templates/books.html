@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Danh sách sách</h1>
+<p>Thể loại:
+  <a href="{{ url_for('books') }}">Tất cả</a>
+  {% for c in categories %}
+    | <a href="{{ url_for('books', category=c) }}">{{ c }}</a>
+  {% endfor %}
+</p>
+<table border="1" cellpadding="6">
+  <tr><th>ID</th><th>Tên sách</th><th>Tác giả</th><th>Năm</th><th>Thể loại</th><th>Còn sách</th></tr>
+  {% for b in books %}
+  <tr>
+    <td>{{ b.id }}</td>
+    <td><a href="{{ url_for('book_detail', book_id=b.id) }}">{{ b.title }}</a></td>
+    <td>{{ b.author }}</td>
+    <td>{{ b.year }}</td>
+    <td>{{ b.category }}</td>
+    <td>{{ "Có" if b.available else "Hết" }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}

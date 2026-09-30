@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ book.title }}</h1>
+<ul>
+  <li>Tác giả: {{ book.author }}</li>
+  <li>Năm: {{ book.year }}</li>
+  <li>Thể loại: {{ book.category }}</li>
+  <li>Tình trạng: {{ "Sẵn sàng" if book.available else "Đã cho mượn" }}</li>
+</ul>
+<a href="{{ url_for('books') }}">← Quay lại</a>
+{% endblock %}
